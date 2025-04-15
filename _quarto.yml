@@ -1,0 +1,30 @@
+project:
+  type: default
+
+format:
+  pdf:
+    documentclass: report
+    toc: true
+    toc-title: "Table des matières"
+    number-sections: false
+    pdf-engine: xelatex
+    include-in-header: 
+      text: |
+        \usepackage{fancyhdr}
+        \pagestyle{fancy}
+        \fancyhf{}
+        \lhead{B-L Model}
+        \rhead{\leftmark}
+        \cfoot{\thepage}
+
+        \usepackage{amsmath,amssymb,graphicx,booktabs,longtable,float,hyperref}
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}
+          {breaklines,commandchars=\\\{\},fontsize=\small,frame=single,rulecolor=\color{gray},xleftmargin=1em}
+    mainfont: "Palatino"
+    fontsize: 11pt
+    geometry: margin=1in
+
+metadata:
+  title: "Black-Litterman Allocation Model"
+  author: "WANG Hengze"
